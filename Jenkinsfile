@@ -6,7 +6,7 @@ node {
 	}
 
 	stage('Build image') {
-		app = docker.build("${dockerhubaccountid}/${application}:${BUILD_NUMBER}")
+		app = docker.build("${marcelalt}/${application}:${BUILD_NUMBER}")
 	}
 
 	stage('Push image') {
