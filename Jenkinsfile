@@ -1,12 +1,12 @@
 node {
 	def application = "springbootapp"
-	def dockerhubaccountid = "siraj21"
+	def dockerhubaccountid = "marcelalt"
 	stage('Clone repository') {
 		checkout scm
 	}
 
 	stage('Build image') {
-		app = docker.build("${marcelalt}/${application}:${BUILD_NUMBER}")
+		app = docker.build("${dockerhubaccountid}/${application}:${BUILD_NUMBER}")
 	}
 
 	stage('Push image') {
